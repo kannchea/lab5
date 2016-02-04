@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>My HCI Friends</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 	
+    <script src="/js/jquery-1.11.0.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/hci-friends.js"></script>
+   
+    <link href="/css/bootstrap.css" type ="text/css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" type ="text/css" rel="stylesheet">
+    <link href="/css/hci-friends.css" type ="text/css" rel="stylesheet">
+      
+</head>
+
+<body>
+    <div class="container">
+    
+    <a onclick="window.location='.views/index';'">Home</a>
+        
+    <h1>My HCI Friends</h1>    
+        
+    {{#each friends}}
+        <div class="friend">
+            <img src="{{imageURL}}" class="img-responsive">
+            <a href="#">{{name}}</a>
+            <p>{{description}}</p>
+            <hr>
+        </div> 
+    {{/each}}
+        
+    </div>
+</body>
+</html>
